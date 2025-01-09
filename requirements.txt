@@ -1,44 +1,33 @@
-# Manipulation des données
-pandas==1.5.3
-numpy==1.24.3
+# Scraping & APIs
+requests
+beautifulsoup4
+praw   # Pour scraper Reddit
+tweepy  # Pour scraper Twitter
+yfinance  # Pour récupérer les prix de cryptos
 
-# Collecte des données
-yfinance==0.2.18       # Télécharger les données financières
-tweepy==4.14.0         # Collecter des tweets pour l'analyse de sentiment
-praw==7.7.0            # Collecter des données depuis Reddit (analyse des discussions)
-beautifulsoup4==4.12.2  # Pour le web scraping
-requests==2.31.0        # Pour faire des requêtes HTTP
-
-# Analyse technique
-ta==0.10.2             # Calcul automatique des indicateurs techniques (RSI, MACD, etc.)
-
-# Visualisation
-matplotlib==3.7.1
-seaborn==0.12.2
+# NLP & FinBERT
+# transformers
+#torch
+nltk
+sentencepiece
 
 # Machine Learning
-scikit-learn==1.3.0    # Modèles prédictifs et analyse de données
-catboost==1.2          # Modèles de Machine Learning spécifiques
-transformers==4.30.2   # Pour utiliser FinBERT et d'autres modèles de langage
+numpy
+pandas
+scikit-learn
+catboost
 
-# API (FastAPI)
-fastapi==0.95.1        # Framework pour créer l'API
-uvicorn==0.22.0        # Serveur pour exécuter FastAPI
-pydantic==1.10.7       # Pour la validation des données dans FastAPI
+# Data Visualisation
+matplotlib
+seaborn
 
-# Gestion des sentiments
-textblob==0.17.1       # Analyse de sentiment basique
-nltk==3.8.1            # Traitement du langage naturel pour les données textuelles
-vaderSentiment==3.3.2  # Pour une analyse de sentiment plus avancée
+# Portfolio & Finance
+quantstats
+statsmodels
 
-# Gestion des données et des modèles
-joblib==1.3.2          # Pour sauvegarder et charger des modèles
+# FastAPI & Déploiement
+fastapi
+uvicorn
 
-# # Gestion des risques et des métriques
-# riskfolio-lib==2.4.0   # Pour la gestion des risques et des métriques financières
-
-# Optionnel : Manipuler des fichiers JSON ou YAML
-PyYAML==6.0
-
-# Formattage du code
-black==23.7.0          # Pour formater le code Python
+# # Tests
+# pytest

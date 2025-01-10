@@ -28,13 +28,19 @@ INTERVAL = "1d"
 # Dictionnaire pour stocker les données
 crypto_data = {}
 
-# Fonction pour récupérer les prix historiques (Close & Volume)
+# Fonction pour récupérer les prix historiques (Open, High, Low, Close, Volume)
 def get_historical_prices(symbol):
     try:
         data = yf.download(symbol, period=PERIOD, interval=INTERVAL)
         data.reset_index(inplace=True)
-        return data[["Date", "Close", "Volume"]].rename(
-            columns={"Close": f"{symbol}_Close", "Volume": f"{symbol}_Volume"}
+        return data[["Date", "Open", "High", "Low", "Close", "Volume"]].rename(
+            columns={
+                "Open": f"{symbol}_Open",
+                "High": f"{symbol}_High",
+                "Low": f"{symbol}_Low",
+                "Close": f"{symbol}_Close",
+                "Volume": f"{symbol}_Volume"
+            }
         )
     except Exception as e:
         print(f"❌ Erreur pour {symbol} : {str(e)}")

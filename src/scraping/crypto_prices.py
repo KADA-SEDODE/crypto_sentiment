@@ -28,7 +28,7 @@ INTERVAL = "1d"
 # Dictionnaire pour stocker les données
 crypto_data = {}
 
-# Fonction pour récupérer les prix historiques (Open, High, Low, Close, Volume)
+# Fonction pour récupérer les prix historiques (Open, High, Low, Close, Volume )
 def get_historical_prices(symbol):
     try:
         data = yf.download(symbol, period=PERIOD, interval=INTERVAL)

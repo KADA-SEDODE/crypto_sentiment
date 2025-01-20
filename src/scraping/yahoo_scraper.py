@@ -43,7 +43,7 @@ if response.status_code == 200:
                 link = article.get("link", "Lien non trouvé")
                 provider = article.get("publisher", "Source inconnue")
                 # Extraire la date au format UNIX (timestamp)
-                date_timestamp = article.get("providerPublishTime", None)
+                date_timestamp = article.get("providerPublishTime", None) # 
                 
                 # Vérifier si la date existe, sinon mettre "Date inconnue"
                 

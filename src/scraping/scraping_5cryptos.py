@@ -84,8 +84,9 @@ def save_partial_data(articles_data, file_path):
     except Exception as e:
         print(f"Erreur lors de la sauvegarde des données : {e}")
 
-# Utilisation
-cryptos = ["BITCOIN", "ETHEREUM", "BNB", "XRP", "SOL"]  # Liste des cryptos
+# Utilisation  
+# #["BITCOIN", "ETHEREUM", "BNB", "XRP", "SOL"]  # Liste des anciens cryptos
+cryptos = ["Polkadot", "Dogecoin ", "Tether ", "Cardano ","Polygon "]  # Liste des nouveaux cryptos
 base_url = "https://crypto.news"
 
 for crypto in cryptos:
@@ -96,3 +97,4 @@ for crypto in cryptos:
     print(f"Terminé pour {crypto}. Données sauvegardées dans {file_path}.\n")
 
 print("Scraping terminé.")
+

@@ -8,17 +8,7 @@ CRYPTOS = {
     "Ethereum": "ETH-USD",
     "Binance Coin": "BNB-USD",
     "Solana": "SOL-USD",
-    "XRP": "XRP-USD",
-    "Cardano": "ADA-USD",
-    "Dogecoin": "DOGE-USD",
-    "Polygon": "MATIC-USD",
-    "Polkadot": "DOT-USD",
-    "Avalanche": "AVAX-USD",
-    "Shiba Inu": "SHIB-USD",
-    "Chainlink": "LINK-USD",
-    "Litecoin": "LTC-USD",
-    "Cosmos": "ATOM-USD",
-    "Uniswap": "UNI-USD"
+    "XRP": "XRP-USD"
 }
 
 # 📅 Période : 12 derniers mois (Mai 2023 - Aujourd'hui)
@@ -62,6 +52,6 @@ for symbol, df in crypto_data.items():
         df_final = pd.merge(df_final, df, on="Date", how="outer")  # Fusionner sur "Date"
 
 # Sauvegarde des données en CSV bien formaté
-df_final.to_csv("data/raw/crypto_prices_historical_12months_fixed.csv", index=False, sep=",", encoding="utf-8")
+df_final.to_csv("data/raw/crypto_prices_historical_12.csv", index=False, sep=",", encoding="utf-8")
 
-print("✅ Données enregistrées dans data/raw/crypto_prices_historical_12months_fixed.csv avec un format aligné.")
+print("✅ Données enregistrées dans data/raw/crypto_prices_historical_12.csv avec un format aligné.")

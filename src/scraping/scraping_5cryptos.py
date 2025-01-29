@@ -86,7 +86,7 @@ def save_partial_data(articles_data, file_path):
 
 # Utilisation  
 # #["BITCOIN", "ETHEREUM", "BNB", "XRP", "SOL"]  # Liste des anciens cryptos
-cryptos = ["Polkadot", "Dogecoin ", "Tether ", "Cardano ","Polygon "]  # Liste des nouveaux cryptos
+cryptos = ["Polkadot", "Dogecoin ", "Tether ", "Cardano ","Polygon"]  # Liste des nouveaux cryptos
 base_url = "https://crypto.news"
 
 for crypto in cryptos:

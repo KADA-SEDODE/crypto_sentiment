@@ -31,3 +31,4 @@ uvicorn
 
 # # Tests
 # pytest
+spacy

@@ -1,46 +1,76 @@
-📂 crypto_sentiment_analysis/
-│── 📂 data/                     # Stockage des fichiers CSV ou bases de données
-│   ├── raw/                     # Données brutes collectées (avant transformation)
-│   ├── processed/                # Données nettoyées et transformées
-│   ├── sentiment_scores.csv       # Scores des sentiments après NLP
-│   ├── crypto_prices.csv          # Prix des cryptos (historique)
-│
-│── 📂 notebooks/                 # Contient les analyses exploratoires en Jupyter
-│   ├── eda.ipynb                  # Notebook d’analyse exploratoire des données
-│   ├── backtesting.ipynb          # Notebook de backtesting des stratégies
-│
-│── 📂 src/                        # Dossier principal pour le code source
-│   ├── 📂 scraping/                # Scripts pour récupérer les données
-│   │   ├── yahoo_scraper.py         # Scraper Yahoo Finance
-│   │   ├── reddit_scraper.py        # Scraper Reddit
-│   │   ├── twitter_scraper.py       # Scraper Twitter
-│   │
-│   ├── 📂 sentiment_analysis/      # Scripts pour analyser le sentiment
-│   │   ├── finbert_analysis.py      # Analyse des textes avec FinBERT
-│   │
-│   ├── 📂 data_processing/         # Scripts pour traiter et nettoyer les données
-│   │   ├── feature_engineering.py   # Création des indicateurs techniques
-│   │   ├── data_cleaning.py         # Nettoyage des données
-│   │
-│   ├── 📂 portfolio_strategy/      # Stratégies d'investissement basées sur le sentiment
-│   │   ├── portfolio_builder.py     # Construction du portefeuille HML
-│   │   ├── backtest.py              # Script pour backtester la stratégie
-│
-│   ├── 📂 api/                     # Déploiement de l'API avec FastAPI
-│   │   ├── main.py                  # Fichier principal de l’API
-│
-│── 📂 models/                      # Stockage des modèles entraînés
-│   ├── trained_model.pkl            # Modèle ML entraîné
-│
-│── 📂 tests/                       # Tests unitaires pour s’assurer du bon fonctionnement
-│   ├── test_scraping.py             # Tests pour le scraping
-│   ├── test_sentiment.py            # Tests pour FinBERT
-│
-│── 📂 docs/                        # Documentation du projet
-│   ├── README.md                    # Explication du projet
-│   ├── requirements.txt              # Liste des packages nécessaires
-│   ├── config.yaml                   # Fichier de configuration
-│
-│── .gitignore                      # Ignorer certains fichiers inutiles (ex : fichiers de logs)
-│── setup.py                         # Pour transformer le projet en package Python
-│── run.py                           # Script principal pour exécuter tout le pipeline
+# 🚀 Crypto Sentiment API
+
+Une API permettant d'interagir avec le scraping de données financières, l'analyse de sentiment via **CryptoBERT** et la gestion des données cryptos.
+
+## 📖 Table des matières
+- [📌 Présentation](#-présentation)
+- [⚙️ Installation](#%EF%B8%8F-installation)
+- [🚀 Lancer l'API](#-lancer-lapi)
+- [🛠️ Fonctionnalités](#%EF%B8%8F-fonctionnalités)
+- [📂 Structure du Projet](#-structure-du-projet)
+- [📡 Endpoints de l'API](#-endpoints-de-lapi)
+- [📌 Notes Importantes](#-notes-importantes)
+
+---
+
+## 📌 Présentation
+
+Ce projet a pour objectif de scraper des actualités cryptos, d'analyser le **sentiment du marché** et de calculer les **rendements** associés aux stratégies de trading.
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ **Cloner le projet**
+```bash
+git clone https://github.com/KADA-SEDODE/crypto_sentiment.git
+cd crypto-sentiment-api
+
+
+2️⃣ Créer un environnement virtuel
+
+python -m venv .venv
+source .venv/bin/activate  # Pour Linux/macOS
+# ou
+.venv\Scripts\activate  # Pour Windows
+3️⃣ Installer les dépendances
+pip install -r requirements.txt
+
+🚀 Lancer l'API
+uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
+
+
+📂 Structure du Projet
+
+
+📦 PROJET_FINANCE_QUANTITATIVE
+├── 📂 .venv                      # Environnement virtuel Python
+├── 📂 data
+│   ├── 📂 raw                    # Données brutes scrappées
+│   ├── 📂 reddit_data            # Données spécifiques à Reddit
+├── 📂 data_processing
+│   ├── 📂 data
+│   │   ├── data_cleaning copy.ipynb  # Notebook de nettoyage et preprocessing
+│   │   ├── df_final.csv          # Données finales après preprocessing
+│   ├── 📂 scripts                 # Contiendra les scripts de traitement des données
+│       ├── __pycache__/          # Cache Python
+├── 📂 src                         # Code source principal
+│   ├── 📂 api                     # API FastAPI
+│   │   ├── __pycache__/           # Cache Python
+│   │   ├── __init__.py            # Initialisation du module API
+│   │   ├── data_api.py            # API pour l'analyse des données et des sentiments
+│   │   ├── main.py                # Point d'entrée principal de l'API
+│   │   ├── models.py              # Modèles Pydantic pour les requêtes/réponses
+│   │   ├── scraper_api.py         # API pour le scraping des news cryptos
+│   │   ├── utils.py               # Fonctions utilitaires
+│   ├── 📂 scraping                 # Scripts de scraping
+│   │   ├── __pycache__/           # Cache Python
+│   │   ├── __init__.py            # Initialisation du module scraping
+│   │   ├── crypto_prices.py       # Récupération des prix des cryptos
+│   │   ├── reddit_articles.py     # Extraction des articles Reddit
+│   │   ├── reddit_scraper.py      # Scraping depuis Reddit
+│   │   ├── scraping_5cryptos.py   # Scraping de 5 cryptos depuis crypto.news
+│   │   ├── utils.py               # Fonctions utilitaires scraping
+├── .gitignore                     # Fichiers à ignorer par Git
+├── README.md                      # Documentation du projet 📖
+├── requirements.txt                # Liste des dépendances Python 📜

@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 import pandas as pd
 import os
+import black
 
 def scrape_articles(base_url, max_days=180, query="BITCOIN", max_pages=300):
     headers = {
@@ -84,33 +85,20 @@ def save_partial_data(articles_data, file_path):
     except Exception as e:
         print(f"Erreur lors de la sauvegarde des données : {e}")
 
-# Utilisation  
 # "Polkadot", "Dogecoin ", "Tether ", "Cardano ","Polygon","BITCOIN", "ETHEREUM",
 # cryptos = ["Binance Coin BNB","Ripple XRP", "Solana SOL"]  # Liste des nouveaux cryptos
-# base_url = "https://crypto.news"
 
-# for crypto in cryptos:
-#     print(f"Scraping articles pour {crypto}...")
-#     file_path = f"data/raw/articles_{crypto.lower().replace(' ', '_')}.csv"
-#     articles = scrape_articles(base_url, max_days=180, query=crypto, max_pages=300)
-#     save_partial_data(articles, file_path)
-#     print(f"Terminé pour {crypto}. Données sauvegardées dans {file_path}.\n")
 
-# print("Scraping terminé.")
 
 # ✅ Liste mise à jour des **25 cryptos** à scraper
-cryptos = [
-    "Shiba Inu", "Stellar", "TRON", "Near Protocol", "Algorand", "Toncoin",
-    "Arbitrum", "Aptos", "Optimism", "VeChain", "Bitcoin", "Ethereum",
-    "Binance Coin", "Solana", "XRP", "Cardano", "Dogecoin", "Polygon",
-    "Polkadot", "Tether", "Litecoin", "Chainlink", "Uniswap", "Avalanche",
-    "Cosmos"
-]
+
+cryptos = ["Binance Coin","Bitcoin","Cardano","Dogecoin","Ethereum","Litecoin","Shiba Inu","Solana","Tether","TRON","XRP"]
+
 
 base_url = "https://crypto.news"
 
 # ❌ On met en commentaire l'exécution automatique
-"""
+"""  
 for crypto in cryptos:
     print(f"🚀 Scraping articles pour {crypto}...")
     file_path = f"data/raw/articles_{crypto.lower().replace(' ', '_')}.csv"
@@ -118,10 +106,10 @@ for crypto in cryptos:
     save_partial_data(articles, file_path)
     print(f"✅ Terminé pour {crypto}. Données sauvegardées dans {file_path}.\n")
 
-print("🎯 **Scraping terminé pour toutes les cryptos !**")
+print("🎯 **Scraping terminé pour toutes les 11 cryptos !**")
 """
 
-# ✅ Exécuter le scraping SEULEMENT si ce script est exécuté directement
+# Exécuter le scraping SEULEMENT si ce script est exécuté directement
 if __name__ == "__main__":
     base_url = "https://crypto.news"
 

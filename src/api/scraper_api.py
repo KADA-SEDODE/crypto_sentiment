@@ -9,7 +9,7 @@ def scrape_data(request: ScrapeRequest):
     """
     Endpoint pour déclencher le scraping sur demande.
     """
-    if request.source not in ["reddit", "crypto.news"]:
+    if request.source not in ["crypto.news"]:
         raise HTTPException(status_code=400, detail="Source invalide. Choisissez 'reddit' ou 'crypto.news'.")
     
     try:

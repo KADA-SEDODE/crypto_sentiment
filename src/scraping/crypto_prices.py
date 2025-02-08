@@ -2,7 +2,7 @@ import yfinance as yf
 import pandas as pd
 import time
 
-# 📌 Liste des 15 cryptos sélectionnées
+# 📌 Liste des 12 cryptos sélectionnées
 CRYPTOS = {
     "Bitcoin": "BTC-USD",
     "Ethereum": "ETH-USD",
@@ -12,8 +12,10 @@ CRYPTOS = {
     "Cardano": "ADA-USD",
     "Dogecoin": "DOGE-USD",
     "Polygon": "MATIC-USD",
-    "Polkadot": "DOT-USD",
-    "Tether ":"USDT-USD",
+    "Tether": "USDT-USD",
+    "Litecoin": "LTC-USD",
+    "Shiba Inu": "SHIB-USD",
+    "Tron": "TRX-USD"
 }
 
 # 📅 Période : 12 derniers mois (Mai 2023 - Aujourd'hui)

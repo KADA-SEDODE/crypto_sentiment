@@ -39,7 +39,7 @@ pip install -r requirements.txt
 🚀 Lancer l'API
 uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 
-### 📌 Structure du Projet**
+📦 📌 Structure du Projet**
 
 📦 PROJET_FINANCE_QUANTITATIVE
 ├── 📂 .venv                      # Environnement virtuel Python

@@ -22,7 +22,7 @@ Ce projet a pour objectif de scraper des actualités cryptos, d'analyser le **se
 ## ⚙️ Installation
 
 ### 1️⃣ **Cloner le projet**
-
+```bash
 git clone https://github.com/KADA-SEDODE/crypto_sentiment.git
 cd crypto-sentiment-api
 
@@ -39,7 +39,9 @@ pip install -r requirements.txt
 🚀 Lancer l'API
 uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 
-📦 📌 Structure du Projet**
+### 1️⃣ **Cloner le projet**
+## 📌 Structure du Projet
+
 
 📦 PROJET_FINANCE_QUANTITATIVE
 ├── 📂 .venv                      # Environnement virtuel Python
@@ -73,10 +75,7 @@ uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 ├── README.md                      # Documentation du projet 📖
 ├── requirements.txt                # Liste des dépendances Python 📜
 
-### 📌 Notes Importantes
-
+📌 Notes Importantes
 📂 Les fichiers de données sont stockés dans data/raw/ et sont utilisés pour l’analyse.
 ⚡ Le scraping doit être exécuté avant d’analyser les sentiments.
 🔄 Si des erreurs surviennent, réinstalle les dépendances avec : pip install -r requirements.txt
-
-

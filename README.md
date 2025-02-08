@@ -15,7 +15,12 @@ Une API permettant d'interagir avec le scraping de données financières, l'anal
 
 ## 📌 Présentation
 
-Ce projet a pour objectif de scraper des actualités cryptos, d'analyser le **sentiment du marché** et de calculer les **rendements** associés aux stratégies de trading.
+Ce projet a pour objectif :
+
+📊 Scraper des actualités cryptos depuis plusieurs sources.
+🔍 Analyser le sentiment du marché à l'aide du modèle CryptoBERT.
+📈 Calculer les rendements associés aux stratégies de trading.
+Nous avons scrapé des données depuis Reddit et CryptoNews, mais seules les données de CryptoNews ont été utilisées pour l'analyse des sentiments et les modèles de prédiction. 📰⚡
 
 ---
 
@@ -58,6 +63,7 @@ uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 │   │   ├── 📄 __init__.py          # Initialisation du module API
 │   │   ├── 📄 data_api.py          # API pour l'analyse des données et des sentiments
 │   │   ├── 📄 main.py              # Point d'entrée principal de l'API
+│   │   ├── 📄predict_api.py           # 🤖 API pour analyser les sentiments avec CryptoBERT
 │   │   ├── 📄 models.py            # Modèles Pydantic pour les requêtes/réponses
 │   │   ├── 📄 scraper_api.py       # API pour le scraping des news cryptos
 │   │   ├── 📄 utils.py             # Fonctions utilitaires
@@ -75,6 +81,7 @@ uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 
 
 📌 Notes Importantes
-📂 Les fichiers de données sont stockés dans data/raw/ et sont utilisés pour l’analyse.
+📁 Les fichiers de données utiles pour l'API sont déjà disponibles dans data/raw/ ✅
+➡️ Pas besoin d'exécuter data_cleaning_v2.ipynb, qui peut être très long ! ⚠️
 ⚡ Le scraping doit être exécuté avant d’analyser les sentiments.
 🔄 Si des erreurs surviennent, réinstalle les dépendances avec : pip install -r requirements.txt

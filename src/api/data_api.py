@@ -4,8 +4,15 @@ import numpy as np  # Ajoute cette ligne en haut de ton fichier
 import re
 import spacy
 import torch
+import matplotlib.pyplot as plt   
+import seaborn as sns 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, TextClassificationPipeline
 from src.scraping.crypto_prices import get_historical_prices
+from fastapi.responses import FileResponse
+from fastapi.responses import StreamingResponse
+import io
+import json
+import os
 
 router = APIRouter()
 
@@ -131,15 +138,6 @@ def compute_portfolio_returns():
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erreur: {str(e)}")
-    
-    
-import matplotlib.pyplot as plt   
-import seaborn as sns 
-from fastapi.responses import FileResponse
-from fastapi.responses import StreamingResponse
-import io
-import json
-import os
 
 # ✅ Endpoint pour récupérer les statistiques de performance du portefeuille
 @router.get("/data/portfolio_statistics")

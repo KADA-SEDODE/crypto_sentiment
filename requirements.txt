@@ -1,34 +1,35 @@
-# Scraping & APIs
+# 📌 Web Scraping & APIs
 requests
 beautifulsoup4
-praw   # Pour scraper Reddit
-tweepy  # Pour scraper Twitter
-yfinance  # Pour récupérer les prix de cryptos
+praw
+tweepy
+yfinance
 
-# NLP & FinBERT
-# transformers
-#torch
+# 📌 NLP & Sentiment Analysis
 nltk
+spacy
 sentencepiece
+transformers
+torch
 
-# Machine Learning
-numpy
+# 📌 Machine Learning
+numpy<2.0  # Éviter les conflits avec CatBoost
 pandas
 scikit-learn
 catboost
 
-# Data Visualisation
+# 📌 Data Visualization
 matplotlib
 seaborn
 
-# Portfolio & Finance
+# 📌 Portfolio & Finance
 quantstats
 statsmodels
 
-# FastAPI & Déploiement
+# 📌 FastAPI & Déploiement
 fastapi
 uvicorn
 
-# # Tests
-# pytest
-spacy
+# 📌 Tests et Développement
+pytest
+httpx

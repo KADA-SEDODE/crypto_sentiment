@@ -46,39 +46,36 @@ uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 
 ## 📂 Structure du Projet
 
-📦 **PROJET_FINANCE_QUANTITATIVE**
-├── 📂 .venv                      # Environnement virtuel Python
+📦 PROJET_FINANCE_QUANTITATIVE
+├── 📂 .venv # Environnement virtuel Python
 ├── 📂 data
-│   ├── 📂 raw                    # Données brutes scrappées
-│   ├── 📂 reddit_data            # Données spécifiques à Reddit
+│ ├── 📂 raw # 📊 Données brutes scrappées (articles, prix, sentiments, rendements)
+│ ├── 📂 reddit_data # 📊 Données spécifiques à Reddit
 ├── 📂 data_processing
-│   ├── 📂 data
-│   │   ├── 📄 data_cleaning copy.ipynb  # Notebook de nettoyage et preprocessing
-│   │   ├── 📄 df_final.csv          # Données finales après preprocessing
-│   ├── 📂 scripts                 # Scripts de traitement des données
-│       ├── 📂 __pycache__/          # Cache Python
-├── 📂 src                         # Code source principal
-│   ├── 📂 api                     # API FastAPI
-│   │   ├── 📂 __pycache__/         # Cache Python
-│   │   ├── 📄 __init__.py          # Initialisation du module API
-│   │   ├── 📄 data_api.py          # API pour l'analyse des données et des sentiments
-│   │   ├── 📄 main.py              # Point d'entrée principal de l'API
-│   │   ├── 📄predict_api.py           # 🤖 API pour analyser les sentiments avec CryptoBERT
-│   │   ├── 📄 models.py            # Modèles Pydantic pour les requêtes/réponses
-│   │   ├── 📄 scraper_api.py       # API pour le scraping des news cryptos
-│   │   ├── 📄 utils.py             # Fonctions utilitaires
-│   ├── 📂 scraping                 # Scripts de scraping
-│   │   ├── 📂 __pycache__/         # Cache Python
-│   │   ├── 📄 __init__.py          # Initialisation du module scraping
-│   │   ├── 📄 crypto_prices.py     # Récupération des prix des cryptos
-│   │   ├── 📄 reddit_articles.py   # Extraction des articles Reddit
-│   │   ├── 📄 reddit_scraper.py    # Scraping depuis Reddit
-│   │   ├── 📄 scraping_5cryptos.py # Scraping de 5 cryptos depuis crypto.news
-│   │   ├── 📄 utils.py             # Fonctions utilitaires scraping
-├── 📄 .gitignore                   # Fichiers à ignorer par Git
-├── 📄 README.md                    # Documentation du projet 📖
-├── 📄 requirements.txt              # Liste des dépendances Python 📜
-
+│ ├── 📂 data
+│ │ ├── 📄 data_cleaning_cryptonews_only.ipynb # Notebook de nettoyage des articles crypto
+│ │ ├── 📄 data_cleaning_cryptonews_reddit.ipynb # Notebook de nettoyage des articles Reddit
+├── 📂 scripts # 📜 Scripts de traitement des données
+│ ├── 📂 pycache/ # ⚙️ Cache Python
+├── 📂 src # 📂 Code source principal
+│ ├── 📂 api # 🚀 API FastAPI
+│ │ ├── 📂 pycache/ # ⚙️ Cache Python
+│ │ ├── 📄 init.py # Initialisation du module API
+│ │ ├── 📄 data_api.py # API pour l'analyse des données et des sentiments
+│ │ ├── 📄 main.py # Point d'entrée principal de l'API
+│ │ ├── 📄 predict_api.py # 🤖 API pour analyser les sentiments avec CryptoBERT
+│ │ ├── 📄 models.py # Modèles Pydantic pour les requêtes/réponses
+│ │ ├── 📄 scraper_api.py # API pour le scraping des news cryptos
+│ │ ├── 📄 utils.py # Fonctions utilitaires pour l'API
+│ ├── 📂 scraping # 📡 Scripts de scraping
+│ │ ├── 📂 pycache/ # ⚙️ Cache Python
+│ │ ├── 📄 init.py # Initialisation du module scraping
+│ │ ├── 📄 crypto_prices.py # Récupération des prix des cryptos via Yahoo Finance
+│ │ ├── 📄 reddit_scraper.py # Scraping des articles Reddit
+│ │ ├── 📄 scraping_5cryptos.py # Scraping des articles de cryptos depuis crypto.news
+├── 📄 .gitignore # 🚫 Fichiers à ignorer par Git
+├── 📄 README.md # 📖 Documentation du projet
+├── 📄 requirements.txt # 📜 Liste des dépendances Python
 
 📌 Notes Importantes
 📁 Les fichiers de données utiles pour l'API sont déjà disponibles dans data/raw/ ✅

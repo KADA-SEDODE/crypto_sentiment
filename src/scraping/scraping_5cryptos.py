@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 import pandas as pd
 import os
-import black
+
 
 def scrape_articles(base_url, max_days=180, query="BITCOIN", max_pages=300):
     headers = {
@@ -85,12 +85,10 @@ def save_partial_data(articles_data, file_path):
     except Exception as e:
         print(f"Erreur lors de la sauvegarde des données : {e}")
 
-# "Polkadot", "Dogecoin ", "Tether ", "Cardano ","Polygon","BITCOIN", "ETHEREUM",
-# cryptos = ["Binance Coin BNB","Ripple XRP", "Solana SOL"]  # Liste des nouveaux cryptos
 
 
 
-# ✅ Liste mise à jour des **25 cryptos** à scraper
+# ✅ Liste mise à jour des ** cryptos** à scraper
 
 cryptos = ["Binance Coin","Bitcoin","Cardano","Dogecoin","Ethereum","Litecoin","Shiba Inu","Solana","Tether","TRON","XRP"]
 

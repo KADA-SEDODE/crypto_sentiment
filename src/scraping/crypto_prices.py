@@ -2,7 +2,7 @@ import yfinance as yf
 import pandas as pd
 import time
 
-# 📌 Liste des 12 cryptos sélectionnées
+# 📌 Liste des 11 cryptos sélectionnées
 CRYPTOS = {
     "Bitcoin": "BTC-USD",
     "Ethereum": "ETH-USD",
@@ -11,7 +11,6 @@ CRYPTOS = {
     "XRP": "XRP-USD",
     "Cardano": "ADA-USD",
     "Dogecoin": "DOGE-USD",
-    "Polygon": "MATIC-USD",
     "Tether": "USDT-USD",
     "Litecoin": "LTC-USD",
     "Shiba Inu": "SHIB-USD",
@@ -19,7 +18,7 @@ CRYPTOS = {
 }
 
 # 📅 Période : 12 derniers mois (Mai 2023 - Aujourd'hui)
-PERIOD = "2y"
+PERIOD = "1y"
 INTERVAL = "1d"
 
 # Dictionnaire pour stocker les données
@@ -59,7 +58,7 @@ for symbol, df in crypto_data.items():
         df_final = pd.merge(df_final, df, on="Date", how="outer")  # Fusionner sur "Date"
 
 # Sauvegarde des données en CSV bien formaté
-df_final.to_csv("data/raw/crypto_prices_historical_12.csv", index=False, sep=",", encoding="utf-8")
+df_final.to_csv("data/raw/crypto_prices_historical_11.csv", index=False, sep=",", encoding="utf-8")
 
-print("✅ Données enregistrées dans data/raw/crypto_prices_historical_12.csv avec un format aligné.")
+print("✅ Données enregistrées dans data/raw/crypto_prices_historical_11.csv avec un format aligné.")
 

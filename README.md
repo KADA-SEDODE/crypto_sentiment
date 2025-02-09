@@ -17,10 +17,10 @@ Une API permettant d'interagir avec le scraping de données financières, l'anal
 
 Ce projet a pour objectif :
 
-📊 Scraper des actualités cryptos depuis plusieurs sources.
+📊 Scrapper des actualités cryptos depuis plusieurs sources.
 🔍 Analyser le sentiment du marché à l'aide du modèle CryptoBERT.
 📈 Calculer les rendements associés aux stratégies de trading.
-Nous avons scrapé des données depuis Reddit et CryptoNews, mais seules les données de CryptoNews ont été utilisées pour l'analyse des sentiments et les modèles de prédiction. 📰⚡
+Nous avons scrapé des données depuis Reddit et CryptoNews, mais seules les données de CryptoNews ont été utilisées pour l'analyse des sentiments et les modèles de prédiction dans cet API. 📰⚡
 
 ---
 
@@ -81,3 +81,4 @@ uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 📁 Les fichiers de données utiles pour l'API sont déjà disponibles dans data/raw/ 
 ⚡ Le scraping doit être exécuté avant d’analyser les sentiments.
 🔄 Si des erreurs surviennent, réinstallez les dépendances avec : pip install -r requirements.txt
+⚡ Aussi de preference utiliser le navigateur chrome pour lancer l'api

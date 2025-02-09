@@ -42,23 +42,26 @@ def get_historical_prices(symbol):
         print(f"❌ Erreur pour {symbol} : {str(e)}")
         return None
 
-# Collecte des prix pour toutes les cryptos
-for name, symbol in CRYPTOS.items():
-    print(f"📊 Récupération des prix de {name} ({symbol})...")
-    df = get_historical_prices(symbol)
-    if df is not None:
-        crypto_data[symbol] = df
+if __name__ == "__main__":
+    print("🚀 Début de la récupération des prix des cryptos...\n")
 
-# Fusionner toutes les cryptos sur la même colonne "Date"
-df_final = None
-for symbol, df in crypto_data.items():
-    if df_final is None:
-        df_final = df  # Premier DataFrame
-    else:
-        df_final = pd.merge(df_final, df, on="Date", how="outer")  # Fusionner sur "Date"
+    # Collecte des prix pour toutes les cryptos
+    for name, symbol in CRYPTOS.items():
+        print(f"📊 Récupération des prix de {name} ({symbol})...")
+        df = get_historical_prices(symbol)
+        if df is not None:
+            crypto_data[symbol] = df
 
-# Sauvegarde des données en CSV bien formaté
-df_final.to_csv("data/raw/crypto_prices_historical_11.csv", index=False, sep=",", encoding="utf-8")
+    # Fusionner toutes les cryptos sur la même colonne "Date"
+    df_final = None
+    for symbol, df in crypto_data.items():
+        if df_final is None:
+            df_final = df  # Premier DataFrame
+        else:
+            df_final = pd.merge(df_final, df, on="Date", how="outer")  # Fusionner sur "Date"
 
-print("✅ Données enregistrées dans data/raw/crypto_prices_historical_11.csv avec un format aligné.")
+    # Sauvegarde des données en CSV bien formaté
+    df_final.to_csv("data/raw/crypto_prices_historical_11.csv", index=False, sep=",", encoding="utf-8")
+
+    print("✅ Données enregistrées dans data/raw/crypto_prices_historical_11.csv avec un format aligné.")
 

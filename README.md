@@ -78,7 +78,6 @@ uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 ├── 📄 requirements.txt # 📜 Liste des dépendances Python
 
 📌 Notes Importantes
-📁 Les fichiers de données utiles pour l'API sont déjà disponibles dans data/raw/ ✅
-➡️ Pas besoin d'exécuter data_cleaning_v2.ipynb, qui peut être très long ! ⚠️
+📁 Les fichiers de données utiles pour l'API sont déjà disponibles dans data/raw/ 
 ⚡ Le scraping doit être exécuté avant d’analyser les sentiments.
-🔄 Si des erreurs surviennent, réinstalle les dépendances avec : pip install -r requirements.txt
+🔄 Si des erreurs surviennent, réinstallez les dépendances avec : pip install -r requirements.txt

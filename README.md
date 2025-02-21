@@ -24,7 +24,7 @@ Nous avons scrapé des données depuis Reddit et CryptoNews, mais seules les don
 
 ---
 
-## ⚙️ Installation
+⚙️ Installation
 
 1️⃣ **Cloner le projet**
 ```bash

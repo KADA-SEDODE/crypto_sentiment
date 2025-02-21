@@ -32,13 +32,13 @@ git clone https://github.com/KADA-SEDODE/crypto_sentiment.git
 cd crypto-sentiment-api
 
 
-2️⃣ Créer un environnement virtuel
+### 2️⃣ Créer un environnement virtuel
 
 python -m venv .venv
 source .venv/bin/activate  # Pour Linux/macOS
 # ou
 .venv\Scripts\activate  # Pour Windows
-3️⃣ Installer les dépendances
+### 3️⃣ Installer les dépendances
 pip install -r requirements.txt
 
 🚀 Lancer l'API

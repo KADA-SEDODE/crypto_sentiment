@@ -26,7 +26,7 @@ Nous avons scrapé des données depuis Reddit et CryptoNews, mais seules les don
 
 ⚙️ Installation
 
-1️⃣ **Cloner le projet**
+1️⃣ Cloner le projet
 ```bash
 git clone https://github.com/KADA-SEDODE/crypto_sentiment.git
 cd crypto-sentiment-api
